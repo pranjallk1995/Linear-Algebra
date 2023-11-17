@@ -127,7 +127,7 @@ if __name__ == "__main__":
 
 
     # ========================================================================================================
-    # TRANSFORMATION GRID
+    # TRANSFORMED GRID
     # ========================================================================================================
 
     # calculating transformation by the new basis
@@ -165,7 +165,7 @@ if __name__ == "__main__":
 
 
     # ========================================================================================================
-    # PERFORMFING INVERSE TRANSFORMATION TO ORIGINAL GRID
+    # INVERSE TRANSFORMED GRID
     # ========================================================================================================
 
     # calculating inverse transformation from the new basis to original basis
