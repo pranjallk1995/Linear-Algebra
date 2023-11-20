@@ -100,7 +100,7 @@ class TransformedBasis():
         --> The matrix with these basis vectors is [[1, 3], [-2, 0]].
         """
         # basis vectors are represented in a list one after the other for easy of coding.
-        # here is the transpose will be the correct matrix representation of these basis vectors (see line 91).
+        # here is the transpose will be the correct matrix representation of these basis vectors (see line 107).
         self.basis = cfg.TRANSFORMED_BASIS
 
     def perform_transformation(self, vector: np.ndarray) -> np.ndarray:
