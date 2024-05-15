@@ -1,3 +1,5 @@
+""" Understanding the backend implementation of tensorflow """
+
 import tensorflow as tf
 
 from tensorflow.keras.layers import Dense
@@ -10,7 +12,7 @@ def custom_loss(y_true, y_pred, extra_parameter=10):
 model = tf.keras.Sequential()
 model.add(
     Dense(
-        units=2, activation='sigmoid', input_shape=(3,),                                                        # notice the input shape as compare to feature space
+        units=2, activation='sigmoid', input_shape=(3,),
         kernel_initializer='glorot_normal', bias_initializer='glorot_normal'
     )
 )
@@ -28,7 +30,7 @@ y = tf.convert_to_tensor([[0., 1.], [1., 0.]])
 model.fit(x, y)
 
 # check:
-weights = tf.convert_to_tensor(model.layers[0].get_weights()[0])                                                
+weights = tf.convert_to_tensor(model.layers[0].get_weights()[0])
 bias = tf.convert_to_tensor(model.layers[0].get_weights()[1])
 
 network_output = []
@@ -43,4 +45,4 @@ for feature_vector in x:
 calculated_ypred = tf.convert_to_tensor(network_output)
 
 # match this with the loss shown during fit
-print(f"calculated loss value: {tf.reduce_mean(10*(y - calculated_ypred))}")                                    # notice that mean is take by default.
+print(f"calculated loss value: {tf.reduce_mean(10*(y - calculated_ypred))}")
