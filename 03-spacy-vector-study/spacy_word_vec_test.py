@@ -15,7 +15,7 @@ if __name__ == "__main__":
     
 
     table = PrettyTable()
-    table.field_names = ["Word 1", "Word 2", "Cosine SImilarity"]
+    table.field_names = ["Word 1", "Word 2", "Cosine Similarity"]
     table.add_row(["banana", "banana", cosine_sim(banana_vec, banana_vec)])
     table.add_row(["banana", "banAna", cosine_sim(banana_vec, banAna_vec)])
     table.add_row(["banana", "apple", cosine_sim(banana_vec, apple_vec)])
